@@ -2,54 +2,54 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NOVI LLC - 18.72% → 0% Bounce Fix</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif}
-html,body{height:100vh;overflow:hidden;background:#f5f6fa;color:#0A2A7A}
-.header{display:flex;justify-content:space-between;align-items:center;padding:6px 10px;background:#fff;border-bottom:1px solid #e5e7eb;height:32px}
-.logo{font-weight:900;font-size:12px;color:#0A2A7A}
-.btn-audit{background:#0A2A7A;color:#fff;padding:4px 8px;border-radius:20px;font-size:9px;font-weight:700;text-decoration:none}
-.wrap{max-width:720px;margin:0 auto;height:calc(100vh - 32px);display:flex;flex-direction:column}
-.hero{background:#0A2A7A;color:#fff;text-align:center;padding:8px 10px 6px}
-.hero h1{font-size:16px;line-height:1.1;font-weight:900;margin-bottom:2px}
-.hero p{opacity:.9;font-size:8px;margin-bottom:5px}
-.hero-btn{background:#fff;color:#0A2A7A;padding:4px 10px;border-radius:20px;font-weight:800;display:inline-block;text-decoration:none;font-size:8px}
-.stats{display:flex;justify-content:space-around;text-align:center;padding:5px;background:#fff;border-bottom:1.5px solid #0A2A7A}
-.stats b{font-size:12px;display:block;color:#0A2A7A}
-.stats span{font-size:7px}
-.main{flex:1;display:flex;flex-direction:column;padding:6px;gap:6px;overflow:hidden}
-.profile-section{background:#fff;padding:6px;text-align:center;border-radius:8px;border:1px solid #e5e7eb}
-.profile-card{max-width:140px;margin:0 auto;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);cursor:pointer;background:#fff;border:1px solid #0A2A7A}
+body{background:#f5f6fa;color:#0A2A7A}
+.header{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:#fff;position:sticky;top:0;z-index:10;border-bottom:1px solid #e5e7eb}
+.logo{font-weight:900;font-size:15px;color:#0A2A7A;letter-spacing:-0.3px}
+.btn-audit{background:#0A2A7A;color:#fff;padding:7px 14px;border-radius:20px;font-size:11px;font-weight:800;text-decoration:none}
+.wrap{max-width:720px;margin:0 auto}
+.hero{background:#0A2A7A;color:#fff;text-align:center;padding:28px 16px 20px}
+.hero h1{font-size:28px;line-height:1.05;font-weight:900;margin-bottom:6px;letter-spacing:-0.5px}
+.hero p{opacity:.85;font-size:11px;margin-bottom:12px;letter-spacing:0.3px}
+.hero-btn{background:#fff;color:#0A2A7A;padding:10px 20px;border-radius:30px;font-weight:800;display:inline-block;text-decoration:none;font-size:11px}
+.stats{display:flex;justify-content:space-around;text-align:center;padding:14px 10px;background:#fff;border-bottom:2px solid #0A2A7A}
+.stats b{font-size:20px;display:block;color:#0A2A7A;font-weight:900}
+.stats span{font-size:10px;opacity:.7}
+.profile-section{background:#fff;padding:18px 16px 14px;text-align:center;border-bottom:1px solid #e5e7eb}
+.profile-card{max-width:220px;margin:0 auto;border-radius:14px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,0.12);cursor:pointer;background:#fff;border:1.5px solid #0A2A7A;transition:transform .25s ease}
+.profile-card:hover{transform:scale(1.02)}
 .profile-card img{width:100%;display:block}
-.profile-cta{padding:3px;background:#0a66c2;color:#fff;font-weight:800;font-size:7px}
-.verified{font-size:6px;color:#0a66c2;margin-top:3px;font-weight:600}
-.bottom{display:flex;gap:6px;flex:1}
-.card{flex:1;background:#0A2A7A;color:#fff;border-radius:8px;padding:8px}
-.card h3{font-size:9px;margin-bottom:4px}
-.card ul{list-style:none;font-size:8px;line-height:1.4}
-.card.white{background:#fff;color:#0A2A7A;border:1px solid #0A2A7A}
-.pay-btn{background:#0A2A7A;color:#fff;display:block;text-align:center;padding:5px;border-radius:20px;text-decoration:none;font-weight:800;margin-top:4px;font-size:7px}
+.profile-cta{padding:8px;background:#0a66c2;color:#fff;font-weight:800;font-size:10px}
+.verified{font-size:9px;color:#0a66c2;margin-top:8px;font-weight:600}
+.card{margin:12px;background:#0A2A7A;color:#fff;border-radius:14px;padding:18px}
+.card h3{font-size:13px;margin-bottom:8px;letter-spacing:0.3px}
+.card ul{list-style:none;font-size:12px;line-height:1.7}
+.card.white{background:#fff;color:#0A2A7A;border:1.5px solid #0A2A7A}
+.pay .inner{background:#fff;border-radius:12px;padding:16px;margin-top:10px;color:#0A2A7A}
+.pay-btn{background:#0A2A7A;color:#fff;display:block;text-align:center;padding:12px;border-radius:30px;text-decoration:none;font-weight:800;margin-top:10px;font-size:11px}
+.sub{font-size:10px;opacity:.7;margin-top:6px}
+.footer{text-align:center;font-size:9px;padding:18px;color:#999}
 </style>
 </head>
 <body>
-<div class="header"><div style="display:flex;justify-content:space-between;align-items:center;width:100%;max-width:720px;margin:0 auto"><div class="logo">NOVI LLC</div><a class="btn-audit" href="https://www.linkedin.com/in/floran-bounce-fix/" target="_blank">$150 AUDIT</a></div></div>
+<div class="header"><div class="wrap" style="display:flex;justify-content:space-between;align-items:center;width:100%"><div class="logo">NOVI LLC</div><a class="btn-audit" href="https://www.linkedin.com/in/floran-bounce-fix/" target="_blank">$150 AUDIT</a></div></div>
 <div class="wrap">
-<div class="hero"><h1>18.72% → 0% BOUNCE FIX</h1><p>Email Deliverability Case Study • Shopify + Brevo</p><a class="hero-btn" href="https://www.linkedin.com/in/floran-bounce-fix/" target="_blank">DM BOUNCE on LinkedIn</a></div>
+<div class="hero"><h1>18.72% → 0%<br>BOUNCE FIX</h1><p>Email Deliverability Case Study • Shopify + Brevo</p><a class="hero-btn" href="https://www.linkedin.com/in/floran-bounce-fix/" target="_blank">DM BOUNCE on LinkedIn</a></div>
 <div class="stats"><div><b>18.72%</b><span>Before</span></div><div><b>0%</b><span>After</span></div><div><b>48H</b><span>Delivery</span></div></div>
-<div class="main">
 <div class="profile-section">
 <div class="profile-card" onclick="window.open('https://www.linkedin.com/in/floran-bounce-fix/', '_blank')">
-<img src="floran-profile-card.png" alt="Floran Dieudonnie">
-<div class="profile-cta">🔗 Verify on LinkedIn →</div>
+<img src="floran-profile-card.png" alt="Floran Dieudonnie - NOVI LLC">
+<div class="profile-cta">🔗 Click to Verify on LinkedIn →</div>
 </div>
-<div class="verified">✓ Verified Founder • Wyoming LLC • LinkedIn</div>
+<div class="verified">✓ Verified Founder • Wyoming LLC • Available on LinkedIn</div>
 </div>
-<div class="bottom">
 <div class="card"><h3>PROBLEM</h3><ul><li>✕ 18.72% bounce</li><li>✕ Campaigns blocked</li><li>✕ SPF/DKIM fail</li><li>✕ No sunset flow</li></ul></div>
-<div class="card white"><h3>WHAT YOU GET ($150)</h3><ul><li>✓ Deliverability Check</li><li>✓ Bounce Analysis</li><li>✓ SPF/DKIM Fix</li><li>✓ List Clean + Sunset</li><li>✓ PDF + Loom</li></ul><a class="pay-btn" href="https://wa.me/233243876362" target="_blank">WhatsApp → Get Audit</a></div>
-</div>
-</div>
+<div class="card white"><h3>WHAT YOU GET ($150)</h3><ul><li>✓ Deliverability Check</li><li>✓ Bounce Analysis</li><li>✓ SPF/DKIM Fix</li><li>✓ List Clean Plan</li><li>✓ Sunset Flow</li><li>✓ PDF + Loom</li></ul></div>
+<div class="card pay"><h3>PAY $150 - GREY USD</h3><div class="sub">2 spots left this week</div><div class="inner"><ol style="padding-left:14px;font-size:11px;line-height:1.5"><li>Pay $150 via Grey USD account</li><li>Send receipt on WhatsApp</li><li>Get teardown in 48h</li></ol><a class="pay-btn" href="https://wa.me/233243876362?text=Hi%20Floran%2C%20I%20need%20the%20%24150%20bounce%20audit%20-%2018.72%25%20to%200%25" target="_blank">Message on WhatsApp → Get Audit</a><div class="sub">WhatsApp: +233 243 876 362 • Or DM on LinkedIn</div></div></div>
+<div class="footer">NOVI LLC • Wyoming • © 2026 • linkedin.com/in/floran-bounce-fix</div>
 </div>
 </body>
 </html>
