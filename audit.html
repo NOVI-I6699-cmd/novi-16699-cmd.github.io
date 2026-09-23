@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>NOVI LLC - Bounce Fix</title>
+<title>NOVI LLC - Fix Shopify Bounce in 48h</title>
 <style>
 body{font-family:system-ui;background:#F7F8FF;margin:0;padding:20px;color:#0A2A7A}
 .card{max-width:560px;margin:auto;background:white;border-radius:20px;padding:28px;border:2px solid #0A2A7A;box-shadow:0 10px 30px rgba(10,42,122,0.1)}
@@ -17,4 +17,38 @@ input{width:100%;padding:14px;border:2px solid #0A2A7A;border-radius:10px;margin
 
 <form id="auditForm">
 <input id="shopify" placeholder="Your Shopify URL (e.g. myshop.myshopify.com)" required>
-<input id="email" type="email" placeholder="Your email
+<input id="email" type="email" placeholder="Your email" required>
+<button class="btn" type="submit" id="btn">Get My 90-Min Loom →</button>
+</form>
+
+<p style="font-size:12px;color:#888;text-align:center;margin-top:14px">✓ Loom in 90min ✓ Fix in 48h ✓ USA Only</p>
+<p id="msg" style="text-align:center;display:none;color:green;font-weight:bold;margin-top:12px">✓ Sent! Check your email in 2 min.</p>
+</div>
+
+<script>
+document.getElementById('auditForm').addEventListener('submit', async (e)=>{
+ e.preventDefault();
+ const shop=document.getElementById('shopify').value;
+ const email=document.getElementById('email').value;
+ const btn=document.getElementById('btn');
+ btn.innerText='Sending...'; btn.disabled=true;
+ try{
+   await fetch('https://api.brevo.com/v3/contacts', {
+     method:'POST',
+     headers:{'Content-Type':'application/json','api-key':'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'},
+     body: JSON.stringify({email:email,attributes:{SHOPIFY_URL:shop},listIds:[2],updateEnabled:true})
+   });
+   await fetch('https://api.brevo.com/v3/events', {
+     method:'POST',
+     headers:{'Content-Type':'application/json','api-key':'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'},
+     body: JSON.stringify({event_name:'SHOPIFY_URL requested audit',email:email,properties:{SHOPIFY_URL:shop}})
+   });
+   document.getElementById('msg').style.display='block';
+   document.getElementById('auditForm').style.display='none';
+ }catch(err){
+   alert('Error, try again');
+   btn.innerText='Get My 90-Min Loom →'; btn.disabled=false;
+ }
+});
+</script>
+</body></html>
