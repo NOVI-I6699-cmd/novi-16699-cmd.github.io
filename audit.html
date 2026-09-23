@@ -7,30 +7,15 @@ body{font-family:system-ui;background:#F7F8FF;margin:0;padding:20px;color:#0A2A7
 .btn{background:#0A2A7A;color:white;padding:18px;width:100%;border:none;border-radius:12px;font-weight:bold;font-size:18px;margin-top:16px;cursor:pointer}
 .badge{background:#FFF4D6;color:#0A2A7A;padding:8px 14px;border-radius:20px;display:inline-block;font-weight:bold;font-size:13px}
 input{width:100%;padding:14px;border:2px solid #0A2A7A;border-radius:10px;margin-top:10px;font-size:16px;box-sizing:border-box}
-.link-btn{background:#0077B5;color:white;padding:14px 22px;border-radius:12px;display:inline-block;margin-top:14px;text-decoration:none;font-weight:bold}
+.link-btn{background:#0077B5;color:white;padding:15px 24px;border-radius:12px;display:inline-block;margin-top:16px;text-decoration:none;font-weight:bold;font-size:16px}
 </style></head>
 <body>
 <div class="card">
 <div class="badge">Shopify + Brevo Case Study</div>
 <h1 style="margin:12px 0 4px">I Fix Shopify Bounce in 48h</h1>
 <p style="margin:0 0 18px;color:#555">Get your Loom audit in 90 minutes. USA stores only.</p>
-<form id="auditForm">
+
+<form id="auditForm" onsubmit="return showBoom(event)">
 <input id="shopify" placeholder="Your Shopify URL (e.g. myshop.myshopify.com)" required>
 <input id="email" type="email" placeholder="Your email" required>
-<button class="btn" type="submit">Get My 90-Min Loom →</button>
-</form>
-<p style="font-size:12px;color:#888;text-align:center;margin-top:14px">✓ Loom in 90min ✓ Fix in 48h ✓ USA Only</p>
-<div id="msg" style="text-align:center;display:none;margin-top:20px">
-<h2 style="color:green">🔥 BOOM! Sent!</h2>
-<p>Check your email in 2 min — Loom audit incoming.</p>
-<a href="https://www.linkedin.com/in/floran-bounce-fix/" target="_blank" class="link-btn">→ DM me "BOUNCE" on LinkedIn</a>
-<p style="font-size:12px;margin-top:8px">While you wait, message me directly!</p>
-</div>
-</div>
-<script>
-document.getElementById('auditForm').addEventListener('submit', (e)=>{
- e.preventDefault();
- const shop=document.getElementById('shopify').value;
- const email=document.getElementById('email').value;
- document.getElementById('auditForm').style.display='none';
- document
+<button class
