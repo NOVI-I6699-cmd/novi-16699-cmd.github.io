@@ -35,20 +35,4 @@ document.getElementById('auditForm').addEventListener('submit', async (e)=>{
  try{
    await fetch('https://api.brevo.com/v3/contacts', {
      method:'POST',
-     headers:{'Content-Type':'application/json','api-key':'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'},
-     body: JSON.stringify({email:email,attributes:{SHOPIFY_URL:shop},listIds:[2],updateEnabled:true})
-   });
-   await fetch('https://api.brevo.com/v3/events', {
-     method:'POST',
-     headers:{'Content-Type':'application/json','api-key':'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'},
-     body: JSON.stringify({event_name:'SHOPIFY_URL requested audit',email:email,properties:{SHOPIFY_URL:shop}})
-   });
-   document.getElementById('msg').style.display='block';
-   document.getElementById('auditForm').style.display='none';
- }catch(err){
-   alert('Error, try again');
-   btn.innerText='Get My 90-Min Loom →'; btn.disabled=false;
- }
-});
-</script>
-</body></html>
+     headers:{'Content-Type':'application/json','api-key':'xkeysib-e9a97ac0c98d12ba97b5f73fedc0a545184cf85dad2b2da4b60bba864489ad51
